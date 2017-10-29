@@ -1,0 +1,36 @@
+@mixin elr-icon-animated($config: ()) {
+    $config: extend((
+        width: 90px,
+        background: $elr-blue-light,
+        color: $elr-blue
+    ), $config);
+
+    $width: map-get($config, width);
+    $background: map-get($config, background);
+    $color: map-get($config, color);
+
+    @include elr-circle($config: (diameter: $width));
+    margin: to-rems(20px) auto to-rems(30px);
+    text-align: center;
+    background: rgba($background, .2);
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-sizing: content-box;
+    }
+
+    .fa {
+        font-size: to-rems(48px);
+        line-height: $width;
+        color: $color;
+        transition: color .2s;
+    }
+}
