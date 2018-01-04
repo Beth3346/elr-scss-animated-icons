@@ -1,5 +1,13 @@
 @import 'src/main';
 
-.accordion-nav {
-    @include elr-accordion-nav;
+.border-icon {
+    @include elr-icon-border();
+}
+
+.dash-icon {
+    @include elr-icon-dash();
+}
+
+.icon-circle {
+    @include elr-icon-circle();
 }
