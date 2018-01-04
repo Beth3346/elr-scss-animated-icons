@@ -8,10 +8,22 @@
     "email": "beth3346@gmail.com"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-scss-lint": "^0.5.0",
-    "husky": "^0.14.3",
-    "node-sass": "^4.1.1"
+    "node-sass": "^4.6.0",
+    "path": "^0.12.7",
+    "gulp-clean-css": "^3.9.0",
+    "husky": "^0.14.3"
   },
   "homepage": "http://www.elizabeth-rogers.com/elr-utilities/css.html",
   "keywords": [
