@@ -1,101 +1,94 @@
 @mixin elr-icon-close($config: ()) {
-    $config: extend((
-        width: 30px,
-        thickness: 4px
-    ), $config);
+  $config:extend((width: 30px, thickness: 4px), $config);
 
-    $width: map-get($config, width);
-    $thickness: map-get($config, thickness);
+  $width: map-get($config, width);
+  $thickness: map-get($config, thickness);
 
-    span {
-        transition-property: opacity;
-        transition-duration: .2s;
-        transition-delay: .3s, 0s;
-    }
+  span {
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-delay: 0.3s, 0s;
+  }
 
+  &::before {
+    transition-property: top, transform;
+    transition-duration: 0.2s, 0.3s;
+    transition-delay: 0.2s, 0s;
+  }
+
+  &::after {
+    transition-property: bottom, transform;
+    transition-duration: 0.2s, 0.3s;
+    transition-delay: 0.2s, 0s;
+  }
+
+  &.active {
     &::before {
-        transition-property: top, transform;
-        transition-duration: .2s, .3s;
-        transition-delay: .2s, 0s;
+      top: ($width / 2) - ($thickness / 2);
+      transform: rotate(-45deg);
+      transition-delay: 0s, 0.2s;
     }
 
     &::after {
-        transition-property: bottom, transform;
-        transition-duration: .2s, .3s;
-        transition-delay: .2s, 0s;
+      bottom: ($width / 2) - ($thickness / 2);
+      transform: rotate(45deg);
+      transition-delay: 0s, 0.2s;
     }
 
-    &.active {
-        &::before {
-            top: ($width / 2) - ($thickness / 2);
-            transform: rotate(-45deg);
-            transition-delay: 0s, .2s;
-        }
-
-        &::after {
-            bottom: ($width / 2) - ($thickness / 2);
-            transform: rotate(45deg);
-            transition-delay: 0s, .2s;
-        }
-
-        span {
-            opacity: 0;
-            visibility: hidden;
-            transition-delay: 0s, .3s;
-        }
+    span {
+      opacity: 0;
+      visibility: hidden;
+      transition-delay: 0s, 0.3s;
     }
+  }
 }
 
 @mixin elr-icon-arrow($config: ()) {
-    $config: extend((
-        direction: 'left',
-        width: 30px,
-        thickness: 4px
-    ), $config);
+  $config:extend((direction: 'left', width: 30px, thickness: 4px), $config);
 
-    $direction: map-get($config, direction);
-    $width: map-get($config, width);
-    $thickness: map-get($config, thickness);
+  $direction: map-get($config, direction);
+  $width: map-get($config, width);
+  $thickness: map-get($config, thickness);
 
-    span,
-    &::before,
+  span,
+  &::before,
+  &::after {
+    transition: all 0.3s;
+  }
+
+  &.active {
+    span {
+      @if ($direction == 'left') {
+        transform: rotate(-180deg);
+      } @else {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::before {
+      width: 50%;
+      top: 9px;
+
+      @if ($direction == 'left') {
+        left: 0;
+        transform: rotate(-217deg);
+      } @else {
+        left: 50%;
+        transform: rotate(217deg);
+      }
+    }
+
     &::after {
-        transition: all .3s;
+      width: 50%;
+      bottom: 9px;
+
+      @if ($direction == 'left') {
+        left: 0;
+        transform: rotate(-145deg);
+      } @else {
+        left: 50%;
+        transform: rotate(145deg);
+      }
     }
-
-    &.active {
-        span {
-            @if ($direction == 'left') {
-                transform: rotate(-180deg);
-            } @else {
-                transform: rotate(180deg);
-            }
-        }
-
-        &::before {
-            width: 50%;
-            top: 9px;
-
-            @if ($direction == 'left') {
-                left: 0;
-                transform: rotate(-217deg);
-            } @else {
-                left: 50%;
-                transform: rotate(217deg);
-            }
-        }
-
-        &::after {
-            width: 50%;
-            bottom: 9px;
-
-            @if ($direction == 'left') {
-                left: 0;
-                transform: rotate(-145deg);
-            } @else {
-                left: 50%;
-                transform: rotate(145deg);
-            }
-        }
-    }
+  }
 }

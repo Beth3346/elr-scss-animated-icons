@@ -1,13 +1,19 @@
-@import 'src/main';
-
-.border-icon {
-    @include elr-icon-border();
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  font-family: 'Lato', sans-serif;
 }
 
-.dash-icon {
-    @include elr-icon-dash();
+.content-holder {
+  display: flex;
+  flex-wrap: wrap;
+
+  h1 {
+    width: 100%;
+  }
 }
 
-.icon-circle {
-    @include elr-icon-circle();
+.icon-animated {
+  margin: 20px;
 }
