@@ -1,8 +1,15 @@
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
-  padding: 40px 0;
+  padding: 20px;
   font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .content-holder {
