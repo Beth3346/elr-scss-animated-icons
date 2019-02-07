@@ -15,8 +15,8 @@
   text-rendering: optimizeLegibility;
 }
 
-:before,
-:after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -94,10 +94,10 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: '';
 }
 
@@ -157,9 +157,9 @@ section {
   display: block;
 }
 
-@import 'elr-scss-functions/main';
-@import 'elr-scss-animations/main';
+// @import 'node_modules/elr-scss-functions/main';
+// @import 'node_modules/elr-scss-animations/main';
 @import 'src/border-icon';
 @import 'src/dash-icon';
 @import 'src/icon-circle';
-@import 'src/icon-hamburger';
+// @import 'src/icon-hamburger';

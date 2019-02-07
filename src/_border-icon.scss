@@ -1,5 +1,12 @@
+@import 'node_modules/elr-scss-functions/main';
+
 @mixin elr-icon-border($config: ()) {
-  $config:extend((color: #1976d2), $config);
+  $config: extend(
+    (
+      color: #1976d2
+    ),
+    $config
+  );
 
   $color: map-get($config, color);
 
@@ -31,7 +38,12 @@
 }
 
 @mixin elr-icon-border-pop($config: ()) {
-  $config:extend((color: #1976d2), $config);
+  $config: extend(
+    (
+      color: #1976d2
+    ),
+    $config
+  );
 
   $color: map-get($config, color);
 
@@ -63,7 +75,12 @@
 }
 
 @mixin elr-icon-border-pull($config: ()) {
-  $config:extend((color: #1976d2), $config);
+  $config: extend(
+    (
+      color: #1976d2
+    ),
+    $config
+  );
 
   $color: map-get($config, color);
 
@@ -98,7 +115,12 @@
 }
 
 @mixin elr-icon-background-fade($config: ()) {
-  $config:extend((color: #1976d2), $config);
+  $config: extend(
+    (
+      color: #1976d2
+    ),
+    $config
+  );
 
   $color: map-get($config, color);
 

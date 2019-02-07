@@ -1,6 +1,13 @@
+@import 'node_modules/elr-scss-functions/main';
+@import 'node_modules/elr-scss-animations/main';
+
 @mixin elr-icon-dash($config: ()) {
-  $config:extend(
-    (border-thickness: to-rems(3px), rotate: false, color: #1976d2),
+  $config: extend(
+    (
+      border-thickness: to-rems(3px),
+      rotate: false,
+      color: #1976d2
+    ),
     $config
   );
 
