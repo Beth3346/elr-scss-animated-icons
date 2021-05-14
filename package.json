@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "gulp clean && gulp",
-    "start": "gulp clean && gulp watch"
+    "start": "gulp clean && gulp watch",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
