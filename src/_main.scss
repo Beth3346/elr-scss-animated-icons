@@ -157,9 +157,7 @@ section {
   display: block;
 }
 
-// @import 'node_modules/elr-scss-functions/main';
-// @import 'node_modules/elr-scss-animations/main';
-@import 'src/border-icon';
-@import 'src/dash-icon';
-@import 'src/icon-circle';
-// @import 'src/icon-hamburger';
+@import './border-icon';
+@import './dash-icon';
+@import './icon-circle';
+@import './icon-hamburger';
