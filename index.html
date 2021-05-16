@@ -44,7 +44,26 @@
         <i class="fa fa-phone"></i>
       </div>
     </div>
+    <div class="content-holder">
+      <h1>Icons</h1>
+      <button id="icon-close" class="icon-hamburger icon-close">
+        <span></span>
+      </button>
+    </div>
   </div>
+
+<script>
+const close = document.getElementById("icon-close");
+close.addEventListener("click", () => {
+  const classes = close.classList;
+
+  if (classes.contains('active')) {
+    close.classList.remove('active');
+  } else {
+    close.classList.add('active');
+  }
+})
+</script>
 </body>
 
 </html>

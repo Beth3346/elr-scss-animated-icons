@@ -13,7 +13,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -21,8 +20,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "husky": "^6.0.0",
-    "node-sass": "^6.0.0",
-    "path": "^0.12.7"
+    "node-sass": "^6.0.0"
   },
   "homepage": "https://elr-animated-icons.netlify.app",
   "keywords": [

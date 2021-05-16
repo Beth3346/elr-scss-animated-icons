@@ -1,44 +1,66 @@
 @mixin elr-icon-close($config: ()) {
-  $config:extend((width: 30px, thickness: 4px), $config);
+  $config:extend((width: 32px, thickness: 4px, color: #333), $config);
 
   $width: map-get($config, width);
   $thickness: map-get($config, thickness);
+  $color: map-get($config, color);
 
-  span {
-    transition-property: opacity;
-    transition-duration: 0.2s;
-    transition-delay: 0.3s, 0s;
+  width: $width;
+  height: $width;
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  span,
+  &::before,
+  &::after {
+    background: $color;
+    height: $thickness;
+    border-radius: $thickness;
+    width: $width;
+    display: block;
+    position: absolute;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    transition: top 0.2s ease 0.2s,
+      transform 0.3s ease-out 0s;
   }
 
   &::before {
-    transition-property: top, transform;
-    transition-duration: 0.2s, 0.3s;
-    transition-delay: 0.2s, 0s;
+    top: $thickness;
   }
 
   &::after {
-    transition-property: bottom, transform;
-    transition-duration: 0.2s, 0.3s;
-    transition-delay: 0.2s, 0s;
+    top: $width - $thickness;
+  }
+
+  span {
+    transition: opacity 0.2s ease 0s;
+    top: ($width / 2);
   }
 
   &.active {
-    &::before {
+    &::before,
+    &::after {
       top: ($width / 2) - ($thickness / 2);
+      transition: top 0.2s ease 0s,
+        transform 0.3s ease-in 0.2s;
+    }
+  
+    &::before {
       transform: rotate(-45deg);
-      transition-delay: 0s, 0.2s;
     }
 
     &::after {
-      bottom: ($width / 2) - ($thickness / 2);
       transform: rotate(45deg);
-      transition-delay: 0s, 0.2s;
     }
 
     span {
       opacity: 0;
       visibility: hidden;
-      transition-delay: 0s, 0.3s;
     }
   }
 }

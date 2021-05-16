@@ -27,3 +27,11 @@
 .icon-dash-rotate {
   @include elr-icon-dash($config: (rotate: true));
 }
+
+.icon-close {
+  @include elr-icon-close;
+}
+
+.icon-arrow-left {
+  @include elr-icon-arrow;
+}
