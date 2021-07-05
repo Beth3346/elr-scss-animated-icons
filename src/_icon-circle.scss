@@ -1,11 +1,9 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin elr-icon-animated($config: ()) {
   $config: extend(
     (
       width: 90px,
       background: lighten(#1976d2, 20%),
-      color: #1976d2
+      color: #1976d2,
     ),
     $config
   );
@@ -30,7 +28,7 @@
   font-size: to-rems(48px);
 
   &::after {
-    content: '';
+    content: "";
     pointer-events: none;
     position: absolute;
     width: 100%;

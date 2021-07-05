@@ -1,9 +1,7 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin elr-icon-border($config: ()) {
   $config: extend(
     (
-      color: #1976d2
+      color: #1976d2,
     ),
     $config
   );
@@ -40,7 +38,7 @@
 @mixin elr-icon-border-pop($config: ()) {
   $config: extend(
     (
-      color: #1976d2
+      color: #1976d2,
     ),
     $config
   );
@@ -77,7 +75,7 @@
 @mixin elr-icon-border-pull($config: ()) {
   $config: extend(
     (
-      color: #1976d2
+      color: #1976d2,
     ),
     $config
   );
@@ -117,7 +115,7 @@
 @mixin elr-icon-background-fade($config: ()) {
   $config: extend(
     (
-      color: #1976d2
+      color: #1976d2,
     ),
     $config
   );

@@ -20,7 +20,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "husky": "^6.0.0",
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.1"
   },
   "homepage": "https://elr-animated-icons.netlify.app",
   "keywords": [
@@ -33,8 +33,7 @@
     "url": "https://github.com/Beth3346/elr-scss-animated-icons.git"
   },
   "dependencies": {
-    "elr-scss-animations": "^0.0.6",
-    "elr-scss-functions": "0.1.2"
+    "elr-scss-animations": "^0.0.6"
   },
   "husky": {
     "hooks": {

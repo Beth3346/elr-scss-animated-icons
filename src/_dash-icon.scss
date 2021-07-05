@@ -1,12 +1,11 @@
-@import 'node_modules/elr-scss-functions/main';
-@import 'node_modules/elr-scss-animations/src/spin';
+@import "node_modules/elr-scss-animations/src/spin";
 
 @mixin elr-icon-dash($config: ()) {
   $config: extend(
     (
       border-thickness: to-rems(3px),
       rotate: false,
-      color: #1976d2
+      color: #1976d2,
     ),
     $config
   );
