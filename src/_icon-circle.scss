@@ -19,7 +19,7 @@
 
   width: $width;
   height: $width;
-  border-radius: ($width / 2);
+  border-radius: ($width * 0.5);
   display: block;
   margin: to-rems(20px) auto to-rems(30px);
   text-align: center;

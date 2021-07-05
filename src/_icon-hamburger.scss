@@ -39,13 +39,13 @@
 
   span {
     transition: opacity 0.2s ease 0s;
-    top: ($width / 2);
+    top: ($width * 0.5);
   }
 
   &.active {
     &::before,
     &::after {
-      top: ($width / 2) - ($thickness / 2);
+      top: ($width * 0.5) - ($thickness * 0.5);
       transition: top 0.2s ease 0s,
         transform 0.3s ease-in 0.2s;
     }
