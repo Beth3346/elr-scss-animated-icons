@@ -9,8 +9,8 @@
   },
   "scripts": {
     "build": "gulp clean && gulp",
-    "start": "gulp clean && gulp watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "gulp clean && gulp"
   },
   "devDependencies": {
     "del": "^6.0.0",
