@@ -15,12 +15,12 @@
   "devDependencies": {
     "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.1.0",
-    "husky": "^6.0.0",
-    "node-sass": "^6.0.1"
+    "gulp-sass": "^5.0.0",
+    "husky": "^7.0.4",
+    "sass": "^1.43.3"
   },
   "homepage": "https://elr-animated-icons.netlify.app",
   "keywords": [

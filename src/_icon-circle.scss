@@ -19,13 +19,13 @@
   height: $width;
   border-radius: ($width * 0.5);
   display: block;
-  margin: to-rems(20px) auto to-rems(30px);
+  margin: 20px auto 30px;
   text-align: center;
   background: rgba($background, 0.2);
   position: relative;
   cursor: pointer;
   z-index: 1;
-  font-size: to-rems(48px);
+  font-size: 48px;
 
   &::after {
     content: "";

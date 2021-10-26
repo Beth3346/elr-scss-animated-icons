@@ -3,7 +3,7 @@
 @mixin elr-icon-dash($config: ()) {
   $config: extend(
     (
-      border-thickness: to-rems(3px),
+      border-thickness: 3px,
       rotate: false,
       color: #1976d2,
     ),
