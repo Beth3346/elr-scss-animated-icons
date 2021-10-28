@@ -13,17 +13,17 @@ var paths = {
 
 // Clean assets
 function clean() {
-  return del(["./dist/css/", "./dist/images/", "./dist/index.html"]);
+  return del(["./dist"]);
 }
 
 // Copy HTML
 function copyIndex() {
-  return gulp.src("./index.html").pipe(gulp.dest(paths.app));
+  return gulp.src(["./public/*.html"]).pipe(gulp.dest(paths.app));
 }
 
 function copyImages() {
   return gulp
-    .src("./images/**/*.{gif,jpg,png,svg}")
+    .src("public/images/**/*.{gif,jpg,png,svg}")
     .pipe(gulp.dest(paths.images));
 }
 
@@ -31,7 +31,7 @@ gulp.task("default", () => {
   copyImages();
 
   return gulp
-    .src("./*.scss")
+    .src(["./public/*.scss"])
     .pipe(plumber())
     .pipe(
       sass({
