@@ -221,4 +221,5 @@ dwsync.xml
 
 *.scssc
 /.sass-cache/
-/dist/
+/dist
+/.parcel-cache
