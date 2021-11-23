@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en-US" class="no-js">
-<!--<![endif]-->
-
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,47 +14,58 @@
 </head>
 
 <body>
-  <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
   <div class="wrapper">
     <div class="content-holder">
-      <h1>Animated Icons</h1>
-      <div class="icon-animated icon-border">
-        <i class="fa fa-phone"></i>
-      </div>
-      <div class="icon-animated icon-border-pop">
-        <i class="fa fa-phone"></i>
-      </div>
-      <div class="icon-animated icon-border-pull">
-        <i class="fa fa-phone"></i>
-      </div>
-      <div class="icon-animated icon-background-fade">
-        <i class="fa fa-phone"></i>
-      </div>
-      <div class="icon-animated icon-dash">
-        <i class="fa fa-phone"></i>
-      </div>
-      <div class="icon-animated icon-dash-rotate">
-        <i class="fa fa-phone"></i>
+      <h1 class="main-heading">Animated Icons</h1>
+      <div class="demo-content">
+        <div class="icon-animated icon-border">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="icon-animated icon-border-pop">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="icon-animated icon-border-pull">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="icon-animated icon-background-fade">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="icon-animated icon-dash">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="icon-animated icon-dash-rotate">
+          <i class="fa fa-phone"></i>
+        </div>
       </div>
     </div>
-    <div class="content-holder">
-      <h1>Icons</h1>
-      <button id="icon-close" class="icon-hamburger icon-close">
+    <hr>
+    <h2 class="subheading">Animated Menu Icons</h2>
+    <div class="demo-content">
+      <button class="js-icon icon-close">
+        <span></span>
+      </button>
+      <button class="js-icon icon-arrow-left active">
+        <span></span>
+      </button>
+      <button class="js-icon icon-arrow-right active">
         <span></span>
       </button>
     </div>
   </div>
 
 <script>
-const close = document.getElementById("icon-close");
-close.addEventListener("click", () => {
-  const classes = close.classList;
+const buttons = Array.from(document.getElementsByClassName("js-icon"));
 
-  if (classes.contains('active')) {
-    close.classList.remove('active');
-  } else {
-    close.classList.add('active');
-  }
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const classes = button.classList;
+  
+    if (classes.contains('active')) {
+      button.classList.remove('active');
+    } else {
+      button.classList.add('active');
+    }
+  })
 })
 </script>
 </body>

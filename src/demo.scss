@@ -1,5 +1,6 @@
 @import "src/main";
 @import "elr-scss-reset/src/main";
+@import "elr-scss-config/src/main";
 
 @include elr-reset;
 
@@ -10,29 +11,34 @@
 .wrapper {
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: ($base-fontsize * 1.5);
 }
 
 .main-heading {
-  font-size: 36px;
+  font-size: $base-fontsize * 2;
   font-weight: 700;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  border-bottom: $border;
+  padding-bottom: $base-fontsize;
+  margin-bottom: $base-fontsize * 1.5;
   width: 100%;
 }
 
 .subheading {
-  font-size: 16px;
-  color: #666;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  font-size: $base-fontsize * 1.25;
+  color: $primary-color;
+  padding-bottom: $base-fontsize;
+  margin-bottom: $base-fontsize * 1.5;
   width: 100%;
 }
 
 .demo-content {
   position: relative;
-  padding: 20px 0;
+  padding: ($base-fontsize * 1.5) 0;
+  display: flex;
+
+  button {
+    margin: $base-fontsize;
+  }
 }
 
 .icon-animated {
@@ -73,4 +79,12 @@
 
 .icon-arrow-left {
   @include elr-icon-arrow;
+}
+
+.icon-arrow-right {
+  @include elr-icon-arrow(
+    $config: (
+      direction: "right",
+    )
+  );
 }

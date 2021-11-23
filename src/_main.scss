@@ -199,14 +199,14 @@
   $config: extend(
     (
       width: 90px,
-      background: lighten(#1976d2, 20%),
-      color: #1976d2,
+      background-color: lighten($primary-color, 20%),
+      color: $primary-color,
     ),
     $config
   );
 
   $width: map-get($config, width);
-  $background: map-get($config, background);
+  $background-color: map-get($config, background-color);
   $color: map-get($config, color);
   color: $color;
   line-height: $width;
@@ -218,7 +218,7 @@
   display: block;
   margin: 20px auto 30px;
   text-align: center;
-  background: rgba($background, 0.2);
+  background: rgba($background-color, 0.2);
   position: relative;
   cursor: pointer;
   z-index: 1;
@@ -254,6 +254,8 @@
   position: relative;
   display: block;
   cursor: pointer;
+  border: 0;
+  background: transparent;
 
   span,
   &::before,
@@ -313,6 +315,7 @@
       direction: "left",
       width: 30px,
       thickness: 4px,
+      color: $text-color,
     ),
     $config
   );
@@ -320,11 +323,39 @@
   $direction: map-get($config, direction);
   $width: map-get($config, width);
   $thickness: map-get($config, thickness);
+  $color: map-get($config, color);
+
+  width: $width;
+  height: $width;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
 
   span,
   &::before,
   &::after {
+    background: $color;
+    height: $thickness;
+    border-radius: $thickness;
+    width: $width;
+    display: block;
+    position: absolute;
     transition: all 0.3s;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before {
+    top: $thickness;
+  }
+
+  &::after {
+    top: $width - $thickness;
   }
 
   &.active {
@@ -338,26 +369,28 @@
 
     &::before {
       width: 50%;
-      top: 9px;
+      top: 11px;
 
       @if ($direction == "left") {
-        left: 0;
+        left: 6px;
         transform: rotate(-217deg);
       } @else {
-        left: 50%;
+        right: -6px;
         transform: rotate(217deg);
       }
     }
 
     &::after {
       width: 50%;
-      bottom: 9px;
+      bottom: 7px;
+      top: auto;
 
       @if ($direction == "left") {
-        left: 0;
+        left: 6px;
         transform: rotate(-145deg);
       } @else {
-        left: 50%;
+        left: auto;
+        right: -6px;
         transform: rotate(145deg);
       }
     }
