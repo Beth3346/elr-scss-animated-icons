@@ -6,11 +6,13 @@
   $config: extend(
     (
       color: $primary-color,
+      background-color: $lightest-blue,
     ),
     $config
   );
 
   $color: map-get($config, color);
+  $background-color: map-get($config, background-color);
 
   transition: background 0.2s ease;
 
@@ -19,14 +21,14 @@
     left: -7px;
     padding: 7px;
     box-shadow: 0 0 0 1px $color;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, color 0.2s;
     transform: scale(0.8);
     opacity: 0;
   }
 
   &:hover,
   &.active {
-    background-color: rgba($color, 1);
+    background-color: $color;
 
     &::after {
       transform: scale(1);
@@ -43,11 +45,13 @@
   $config: extend(
     (
       color: $primary-color,
+      background-color: $lightest-blue,
     ),
     $config
   );
 
   $color: map-get($config, color);
+  $background-color: map-get($config, background-color);
 
   transition: background 0.2s ease;
 
@@ -56,14 +60,14 @@
     left: -7px;
     padding: 7px;
     box-shadow: 0 0 0 1px $color;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, color 0.2s;
     transform: scale(1.2);
     opacity: 0;
   }
 
   &:hover,
   &.active {
-    background-color: rgba($color, 1);
+    background-color: $color;
 
     &::after {
       transform: scale(1);
@@ -164,6 +168,7 @@
       border-thickness: 3px,
       rotate: false,
       color: $primary-color,
+      background-color: $lightest-blue,
     ),
     $config
   );
@@ -171,8 +176,9 @@
   $border-thickness: map-get($config, border-thickness);
   $rotate: map-get($config, rotate);
   $color: map-get($config, color);
+  $background-color: map-get($config, background-color);
 
-  box-shadow: 0 0 0 $border-thickness rgba($color, 1);
+  box-shadow: 0 0 0 $border-thickness $color;
   transition: box-shadow 0.3s;
 
   &::after {
@@ -208,6 +214,7 @@
   $width: map-get($config, width);
   $background-color: map-get($config, background-color);
   $color: map-get($config, color);
+
   color: $color;
   line-height: $width;
   transition: color 0.2s;

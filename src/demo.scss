@@ -42,27 +42,27 @@
 }
 
 .icon-animated {
-  @include elr-icon-animated();
+  @include elr-icon-animated;
 }
 
 .icon-border {
-  @include elr-icon-border();
+  @include elr-icon-border;
 }
 
 .icon-border-pop {
-  @include elr-icon-border-pop();
+  @include elr-icon-border-pop;
 }
 
 .icon-border-pull {
-  @include elr-icon-border-pull();
+  @include elr-icon-border-pull;
 }
 
 .icon-background-fade {
-  @include elr-icon-background-fade();
+  @include elr-icon-background-fade;
 }
 
 .icon-dash {
-  @include elr-icon-dash();
+  @include elr-icon-dash;
 }
 
 .icon-dash-rotate {
