@@ -4,8 +4,12 @@
 [![CI](https://github.com/Beth3346/elr-scss-animated-icons/actions/workflows/node.js.yml/badge.svg)](https://github.com/Beth3346/elr-scss-animated-icons/actions/workflows/node.js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-animated-icons.svg?style=flat)](https://npmjs.com/package/elr-scss-animated-icons)
+[![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-animated-icons.svg)](https://github.com/Beth3346/elr-scss-animated-icons)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8dfa0f93-b38a-4c6b-85de-d015a21f8bbe/deploy-status)](https://app.netlify.com/sites/elr-animated-icons/deploys)
 
-a library of sass mixins
+a library of sass mixins for animated icons
+
+[View Demo](https://elr-animated-icons.netlify.app/)
 
 ## Installation
 
