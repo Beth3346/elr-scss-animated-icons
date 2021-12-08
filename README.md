@@ -1,5 +1,7 @@
-# elr-scss-animated-icons
+# Animated Icons
 
+[![npm version](http://img.shields.io/npm/v/elr-scss-animated-icons.svg)](https://www.npmjs.org/package/elr-scss-animated-icons)
+[![Build Status](https://github.com/elr-scss-animated-icons/workflows/CI/badge.svg)](https://github.com/elr-scss-animated-icons/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-animated-icons.svg?style=flat)](https://npmjs.com/package/elr-scss-animated-icons)
 
@@ -11,6 +13,12 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 
 ```sh
 npm install elr-scss-animated-icons --save
+```
+
+or
+
+```sh
+yarn add elr-scss-animated-icons
 ```
 
 ## Implementation
