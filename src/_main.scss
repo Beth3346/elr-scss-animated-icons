@@ -263,6 +263,11 @@
   cursor: pointer;
   border: 0;
   background: transparent;
+  padding: 0;
+
+  &:hover {
+    background: transparent;
+  }
 
   span,
   &::before,
@@ -339,6 +344,11 @@
   cursor: pointer;
   border: 0;
   background: transparent;
+  padding: 0;
+
+  &:hover {
+    background: transparent;
+  }
 
   span,
   &::before,
@@ -379,7 +389,7 @@
       top: 11px;
 
       @if ($direction == "left") {
-        left: 6px;
+        left: 0;
         transform: rotate(-217deg);
       } @else {
         right: -6px;
@@ -393,7 +403,7 @@
       top: auto;
 
       @if ($direction == "left") {
-        left: 6px;
+        left: 0;
         transform: rotate(-145deg);
       } @else {
         left: auto;
