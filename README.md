@@ -16,7 +16,7 @@ a library of sass mixins for animated icons
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install elr-scss-animated-icons --save
+npm install elr-scss-animated-icons
 ```
 
 or
